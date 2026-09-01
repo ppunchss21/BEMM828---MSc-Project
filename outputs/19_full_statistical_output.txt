@@ -1,0 +1,584 @@
+NZTDCI × FINANCIAL PERFORMANCE — FULL STATISTICAL OUTPUT
+==========================================================================================
+
+ROA MODEL 1 — NZTDCI ONLY
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                ROA_pct   R-squared:                       0.032
+Model:                            OLS   Adj. R-squared:                  0.015
+Method:                 Least Squares   F-statistic:                     1.110
+Date:                Sat, 22 Aug 2026   Prob (F-statistic):              0.297
+Time:                        16:22:21   Log-Likelihood:                -179.94
+No. Observations:                  60   AIC:                             363.9
+Df Residuals:                      58   BIC:                             368.1
+Df Model:                           1                                         
+Covariance Type:                  HC3                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept      2.2112      2.529      0.874      0.382      -2.745       7.168
+NZTDCI_10      0.4699      0.446      1.053      0.292      -0.404       1.344
+==============================================================================
+Omnibus:                        9.518   Durbin-Watson:                   1.038
+Prob(Omnibus):                  0.009   Jarque-Bera (JB):                9.625
+Skew:                           0.972   Prob(JB):                      0.00813
+Kurtosis:                       3.261   Cond. No.                         20.3
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+
+==========================================================================================
+
+ROA MODEL 2 — + SIZE / LEVERAGE
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                ROA_pct   R-squared:                       0.445
+Model:                            OLS   Adj. R-squared:                  0.415
+Method:                 Least Squares   F-statistic:                     13.18
+Date:                Sat, 22 Aug 2026   Prob (F-statistic):           1.27e-06
+Time:                        16:22:21   Log-Likelihood:                -163.28
+No. Observations:                  60   AIC:                             334.6
+Df Residuals:                      56   BIC:                             342.9
+Df Model:                           3                                         
+Covariance Type:                  HC3                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     28.4512      6.451      4.410      0.000      15.808      41.095
+NZTDCI_10      0.5596      0.419      1.335      0.182      -0.262       1.381
+Firm_Size     -1.5962      0.533     -2.995      0.003      -2.641      -0.552
+Leverage      -8.6938      3.406     -2.552      0.011     -15.370      -2.018
+==============================================================================
+Omnibus:                        2.495   Durbin-Watson:                   1.326
+Prob(Omnibus):                  0.287   Jarque-Bera (JB):                1.920
+Skew:                          -0.049   Prob(JB):                        0.383
+Kurtosis:                       3.871   Cond. No.                         189.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+
+==========================================================================================
+
+ROA MODEL 3 — + YEAR EFFECTS
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                ROA_pct   R-squared:                       0.455
+Model:                            OLS   Adj. R-squared:                  0.393
+Method:                 Least Squares   F-statistic:                     7.380
+Date:                Sat, 22 Aug 2026   Prob (F-statistic):           9.07e-06
+Time:                        16:22:21   Log-Likelihood:                -162.71
+No. Observations:                  60   AIC:                             339.4
+Df Residuals:                      53   BIC:                             354.1
+Df Model:                           6                                         
+Covariance Type:                  HC3                                         
+===================================================================================
+                      coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept          28.2479      7.043      4.011      0.000      14.445      42.051
+C(Year)[T.2023]     0.8900      1.510      0.589      0.556      -2.070       3.850
+C(Year)[T.2024]     0.3653      1.536      0.238      0.812      -2.645       3.376
+C(Year)[T.2025]     1.3378      1.756      0.762      0.446      -2.105       4.780
+NZTDCI_10           0.5520      0.431      1.281      0.200      -0.292       1.396
+Firm_Size          -1.6418      0.582     -2.822      0.005      -2.782      -0.502
+Leverage           -8.3473      3.745     -2.229      0.026     -15.687      -1.008
+==============================================================================
+Omnibus:                        1.403   Durbin-Watson:                   1.255
+Prob(Omnibus):                  0.496   Jarque-Bera (JB):                0.708
+Skew:                          -0.033   Prob(JB):                        0.702
+Kurtosis:                       3.528   Cond. No.                         189.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+
+==========================================================================================
+
+ROA MODEL 4 — + SECTOR / YEAR EFFECTS
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                ROA_pct   R-squared:                       0.822
+Model:                            OLS   Adj. R-squared:                  0.761
+Method:                 Least Squares   F-statistic:                     61.42
+Date:                Sat, 22 Aug 2026   Prob (F-statistic):           1.81e-24
+Time:                        16:22:21   Log-Likelihood:                -129.23
+No. Observations:                  60   AIC:                             290.5
+Df Residuals:                      44   BIC:                             324.0
+Df Model:                          15                                         
+Covariance Type:                  HC3                                         
+===================================================================================================
+                                      coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+Intercept                          33.1701     17.448      1.901      0.057      -1.028      67.368
+C(Sector)[T.Electronics]            2.4235      6.110      0.397      0.692      -9.552      14.399
+C(Sector)[T.Energy]                -5.2057      3.151     -1.652      0.099     -11.382       0.971
+C(Sector)[T.Financial Services]    -0.0416      0.560     -0.074      0.941      -1.138       1.055
+C(Sector)[T.Healthcare]            -6.6947      6.226     -1.075      0.282     -18.898       5.508
+C(Sector)[T.Materials]             -8.9081      3.674     -2.424      0.015     -16.110      -1.706
+C(Sector)[T.Property]              -3.2316      3.617     -0.893      0.372     -10.322       3.859
+C(Sector)[T.Retail]                -4.5939      2.541     -1.808      0.071      -9.574       0.387
+C(Sector)[T.Telecom]                3.1806      2.654      1.198      0.231      -2.022       8.383
+C(Sector)[T.Transport]            -10.3156      7.112     -1.450      0.147     -24.255       3.624
+C(Year)[T.2023]                     0.9269      1.061      0.873      0.383      -1.154       3.007
+C(Year)[T.2024]                     0.7440      1.123      0.662      0.508      -1.458       2.946
+C(Year)[T.2025]                     1.1153      1.135      0.983      0.326      -1.109       3.340
+NZTDCI_10                          -0.0291      0.214     -0.136      0.892      -0.449       0.391
+Firm_Size                          -0.7802      0.850     -0.918      0.359      -2.446       0.886
+Leverage                          -23.9427      7.097     -3.374      0.001     -37.852     -10.033
+==============================================================================
+Omnibus:                       18.045   Durbin-Watson:                   1.539
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               53.128
+Skew:                          -0.699   Prob(JB):                     2.91e-12
+Kurtosis:                       7.393   Cond. No.                         948.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+
+==========================================================================================
+
+ROE MODEL 1 — NZTDCI ONLY
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                ROE_pct   R-squared:                       0.007
+Model:                            OLS   Adj. R-squared:                 -0.010
+Method:                 Least Squares   F-statistic:                    0.2139
+Date:                Sat, 22 Aug 2026   Prob (F-statistic):              0.645
+Time:                        16:22:21   Log-Likelihood:                -221.97
+No. Observations:                  60   AIC:                             447.9
+Df Residuals:                      58   BIC:                             452.1
+Df Model:                           1                                         
+Covariance Type:                  HC3                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     11.3490      6.100      1.860      0.063      -0.607      23.305
+NZTDCI_10      0.4354      0.941      0.463      0.644      -1.410       2.280
+==============================================================================
+Omnibus:                       14.685   Durbin-Watson:                   1.061
+Prob(Omnibus):                  0.001   Jarque-Bera (JB):               17.218
+Skew:                           1.030   Prob(JB):                     0.000182
+Kurtosis:                       4.627   Cond. No.                         20.3
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+
+==========================================================================================
+
+ROE MODEL 2 — + SIZE / LEVERAGE
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                ROE_pct   R-squared:                       0.177
+Model:                            OLS   Adj. R-squared:                  0.133
+Method:                 Least Squares   F-statistic:                     6.362
+Date:                Sat, 22 Aug 2026   Prob (F-statistic):           0.000868
+Time:                        16:22:21   Log-Likelihood:                -216.32
+No. Observations:                  60   AIC:                             440.6
+Df Residuals:                      56   BIC:                             449.0
+Df Model:                           3                                         
+Covariance Type:                  HC3                                         
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     58.8869     15.795      3.728      0.000      27.929      89.844
+NZTDCI_10      0.8305      0.873      0.951      0.342      -0.881       2.542
+Firm_Size     -4.4074      1.372     -3.212      0.001      -7.097      -1.718
+Leverage      15.2905     10.056      1.520      0.128      -4.420      35.001
+==============================================================================
+Omnibus:                        8.250   Durbin-Watson:                   1.248
+Prob(Omnibus):                  0.016   Jarque-Bera (JB):               11.624
+Skew:                           0.431   Prob(JB):                      0.00299
+Kurtosis:                       4.976   Cond. No.                         189.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+
+==========================================================================================
+
+ROE MODEL 3 — + YEAR EFFECTS
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                ROE_pct   R-squared:                       0.199
+Model:                            OLS   Adj. R-squared:                  0.109
+Method:                 Least Squares   F-statistic:                     3.110
+Date:                Sat, 22 Aug 2026   Prob (F-statistic):             0.0110
+Time:                        16:22:21   Log-Likelihood:                -215.51
+No. Observations:                  60   AIC:                             445.0
+Df Residuals:                      53   BIC:                             459.7
+Df Model:                           6                                         
+Covariance Type:                  HC3                                         
+===================================================================================
+                      coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept          58.2225     17.103      3.404      0.001      24.701      91.745
+C(Year)[T.2023]     2.6344      3.223      0.817      0.414      -3.682       8.951
+C(Year)[T.2024]     1.6990      3.546      0.479      0.632      -5.251       8.649
+C(Year)[T.2025]     4.0207      4.327      0.929      0.353      -4.459      12.501
+NZTDCI_10           0.7816      0.871      0.897      0.370      -0.926       2.489
+Firm_Size          -4.5379      1.535     -2.956      0.003      -7.547      -1.529
+Leverage           16.2903     11.185      1.456      0.145      -5.632      38.212
+==============================================================================
+Omnibus:                        5.703   Durbin-Watson:                   1.152
+Prob(Omnibus):                  0.058   Jarque-Bera (JB):                6.218
+Skew:                           0.351   Prob(JB):                       0.0447
+Kurtosis:                       4.412   Cond. No.                         189.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+
+==========================================================================================
+
+ROE MODEL 4 — + SECTOR / YEAR EFFECTS
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                ROE_pct   R-squared:                       0.754
+Model:                            OLS   Adj. R-squared:                  0.670
+Method:                 Least Squares   F-statistic:                     33.23
+Date:                Sat, 22 Aug 2026   Prob (F-statistic):           4.60e-19
+Time:                        16:22:21   Log-Likelihood:                -180.15
+No. Observations:                  60   AIC:                             392.3
+Df Residuals:                      44   BIC:                             425.8
+Df Model:                          15                                         
+Covariance Type:                  HC3                                         
+===================================================================================================
+                                      coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+Intercept                          27.4682     39.485      0.696      0.487     -49.922     104.858
+C(Sector)[T.Electronics]           11.3047     13.692      0.826      0.409     -15.532      38.141
+C(Sector)[T.Energy]                -2.4396      7.335     -0.333      0.739     -16.817      11.938
+C(Sector)[T.Financial Services]     0.9661      1.236      0.782      0.434      -1.457       3.389
+C(Sector)[T.Healthcare]            -3.5405     14.123     -0.251      0.802     -31.222      24.141
+C(Sector)[T.Materials]             -9.9547      8.484     -1.173      0.241     -26.583       6.674
+C(Sector)[T.Property]               3.6827      8.050      0.457      0.647     -12.095      19.460
+C(Sector)[T.Retail]                 6.4004      5.865      1.091      0.275      -5.094      17.895
+C(Sector)[T.Telecom]               26.3300      6.779      3.884      0.000      13.043      39.617
+C(Sector)[T.Transport]            -10.0008     14.994     -0.667      0.505     -39.388      19.386
+C(Year)[T.2023]                     2.4410      2.416      1.010      0.312      -2.294       7.176
+C(Year)[T.2024]                     1.8445      2.482      0.743      0.457      -3.020       6.709
+C(Year)[T.2025]                     3.0025      2.643      1.136      0.256      -2.177       8.182
+NZTDCI_10                          -0.0341      0.558     -0.061      0.951      -1.129       1.060
+Firm_Size                          -0.4392      1.942     -0.226      0.821      -4.245       3.367
+Leverage                          -16.6219     17.911     -0.928      0.353     -51.727      18.484
+==============================================================================
+Omnibus:                        4.857   Durbin-Watson:                   1.504
+Prob(Omnibus):                  0.088   Jarque-Bera (JB):                5.984
+Skew:                           0.131   Prob(JB):                       0.0502
+Kurtosis:                       4.525   Cond. No.                         948.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+
+==========================================================================================
+
+ROA MAIN MODEL — FIRM-CLUSTERED STANDARD ERRORS
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                ROA_pct   R-squared:                       0.822
+Model:                            OLS   Adj. R-squared:                  0.761
+Method:                 Least Squares   F-statistic:                     128.9
+Date:                Sat, 22 Aug 2026   Prob (F-statistic):           8.97e-12
+Time:                        16:22:21   Log-Likelihood:                -129.23
+No. Observations:                  60   AIC:                             290.5
+Df Residuals:                      44   BIC:                             324.0
+Df Model:                          15                                         
+Covariance Type:              cluster                                         
+===================================================================================================
+                                      coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+Intercept                          33.1701     28.821      1.151      0.250     -23.318      89.659
+C(Sector)[T.Electronics]            2.4235      9.413      0.257      0.797     -16.026      20.873
+C(Sector)[T.Energy]                -5.2057      4.739     -1.098      0.272     -14.494       4.083
+C(Sector)[T.Financial Services]    -0.0416      0.543     -0.076      0.939      -1.107       1.024
+C(Sector)[T.Healthcare]            -6.6947      9.533     -0.702      0.483     -25.379      11.990
+C(Sector)[T.Materials]             -8.9081      5.421     -1.643      0.100     -19.533       1.717
+C(Sector)[T.Property]              -3.2316      5.799     -0.557      0.577     -14.597       8.134
+C(Sector)[T.Retail]                -4.5939      3.911     -1.175      0.240     -12.259       3.071
+C(Sector)[T.Telecom]                3.1806      4.238      0.751      0.453      -5.125      11.486
+C(Sector)[T.Transport]            -10.3156      8.286     -1.245      0.213     -26.557       5.925
+C(Year)[T.2023]                     0.9269      0.774      1.198      0.231      -0.590       2.444
+C(Year)[T.2024]                     0.7440      1.154      0.645      0.519      -1.518       3.006
+C(Year)[T.2025]                     1.1153      1.169      0.954      0.340      -1.176       3.407
+NZTDCI_10                          -0.0291      0.197     -0.148      0.882      -0.415       0.356
+Firm_Size                          -0.7802      1.443     -0.541      0.589      -3.609       2.048
+Leverage                          -23.9427      9.233     -2.593      0.010     -42.038      -5.847
+==============================================================================
+Omnibus:                       18.045   Durbin-Watson:                   1.539
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               53.128
+Skew:                          -0.699   Prob(JB):                     2.91e-12
+Kurtosis:                       7.393   Cond. No.                         948.
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+
+==========================================================================================
+
+ROE MAIN MODEL — FIRM-CLUSTERED STANDARD ERRORS
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                ROE_pct   R-squared:                       0.754
+Model:                            OLS   Adj. R-squared:                  0.670
+Method:                 Least Squares   F-statistic:                     28.63
+Date:                Sat, 22 Aug 2026   Prob (F-statistic):           2.16e-07
+Time:                        16:22:21   Log-Likelihood:                -180.15
+No. Observations:                  60   AIC:                             392.3
+Df Residuals:                      44   BIC:                             425.8
+Df Model:                          15                                         
+Covariance Type:              cluster                                         
+===================================================================================================
+                                      coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+Intercept                          27.4682     64.939      0.423      0.672     -99.810     154.747
+C(Sector)[T.Electronics]           11.3047     21.036      0.537      0.591     -29.924      52.534
+C(Sector)[T.Energy]                -2.4396     10.377     -0.235      0.814     -22.778      17.899
+C(Sector)[T.Financial Services]     0.9661      1.260      0.767      0.443      -1.504       3.436
+C(Sector)[T.Healthcare]            -3.5405     21.149     -0.167      0.867     -44.991      37.910
+C(Sector)[T.Materials]             -9.9547     11.954     -0.833      0.405     -33.383      13.474
+C(Sector)[T.Property]               3.6827     12.993      0.283      0.777     -21.782      29.148
+C(Sector)[T.Retail]                 6.4004      8.765      0.730      0.465     -10.778      23.579
+C(Sector)[T.Telecom]               26.3300      9.491      2.774      0.006       7.728      44.932
+C(Sector)[T.Transport]            -10.0008     18.252     -0.548      0.584     -45.774      25.772
+C(Year)[T.2023]                     2.4410      1.401      1.742      0.082      -0.305       5.187
+C(Year)[T.2024]                     1.8445      2.755      0.669      0.503      -3.556       7.245
+C(Year)[T.2025]                     3.0025      2.920      1.028      0.304      -2.720       8.725
+NZTDCI_10                          -0.0341      0.465     -0.073      0.941      -0.945       0.877
+Firm_Size                          -0.4392      3.256     -0.135      0.893      -6.821       5.943
+Leverage                          -16.6219     19.351     -0.859      0.390     -54.549      21.305
+==============================================================================
+Omnibus:                        4.857   Durbin-Watson:                   1.504
+Prob(Omnibus):                  0.088   Jarque-Bera (JB):                5.984
+Skew:                           0.131   Prob(JB):                       0.0502
+Kurtosis:                       4.525   Cond. No.                         948.
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (cluster)
+
+==========================================================================================
+
+ROA — FIRM FIXED EFFECTS + YEAR FIXED EFFECTS
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:                ROA_pct   R-squared:                        0.4286
+Estimator:                   PanelOLS   R-squared (Between):             -2.2818
+No. Observations:                  60   R-squared (Within):               0.4535
+Date:                Sat, Aug 22 2026   R-squared (Overall):             -1.8133
+Time:                        16:15:04   Log-likelihood                   -108.48
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      9.7527
+Entities:                          15   P-value                           0.0001
+Avg Obs:                       4.0000   Distribution:                    F(3,39)
+Min Obs:                       4.0000                                           
+Max Obs:                       4.0000   F-statistic (robust):             6.6335
+                                        P-value                           0.0010
+Time periods:                       4   Distribution:                    F(3,39)
+Avg Obs:                       15.000                                           
+Min Obs:                       15.000                                           
+Max Obs:                       15.000                                           
+                                                                                
+                             Parameter Estimates                              
+==============================================================================
+            Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------
+Intercept      30.790     41.333     0.7449     0.4608     -52.813      114.39
+NZTDCI_10      0.1380     0.1779     0.7757     0.4426     -0.2218      0.4977
+Firm_Size      0.7213     2.6435     0.2729     0.7864     -4.6257      6.0683
+Leverage      -59.348     18.520    -3.2045     0.0027     -96.808     -21.888
+==============================================================================
+
+F-test for Poolability: 11.963
+P-value: 0.0000
+Distribution: F(17,39)
+
+Included effects: Entity, Time
+
+==========================================================================================
+
+ROE — FIRM FIXED EFFECTS + YEAR FIXED EFFECTS
+                          PanelOLS Estimation Summary                           
+================================================================================
+Dep. Variable:                ROE_pct   R-squared:                        0.3392
+Estimator:                   PanelOLS   R-squared (Between):             -6.2481
+No. Observations:                  60   R-squared (Within):               0.3552
+Date:                Sat, Aug 22 2026   R-squared (Overall):             -4.9435
+Time:                        16:15:04   Log-likelihood                   -158.56
+Cov. Estimator:             Clustered                                           
+                                        F-statistic:                      6.6731
+Entities:                          15   P-value                           0.0010
+Avg Obs:                       4.0000   Distribution:                    F(3,39)
+Min Obs:                       4.0000                                           
+Max Obs:                       4.0000   F-statistic (robust):             3.1638
+                                        P-value                           0.0351
+Time periods:                       4   Distribution:                    F(3,39)
+Avg Obs:                       15.000                                           
+Min Obs:                       15.000                                           
+Max Obs:                       15.000                                           
+                                                                                
+                             Parameter Estimates                              
+==============================================================================
+            Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------
+Intercept      119.56     100.04     1.1951     0.2393     -82.790      321.91
+NZTDCI_10      0.2676     0.4175     0.6410     0.5252     -0.5768      1.1121
+Firm_Size     -2.6126     6.3628    -0.4106     0.6836     -15.482      10.257
+Leverage      -117.83     47.143    -2.4995     0.0168     -213.19     -22.476
+==============================================================================
+
+F-test for Poolability: 13.441
+P-value: 0.0000
+Distribution: F(17,39)
+
+Included effects: Entity, Time
+
+==========================================================================================
+
+ROA — RANDOM EFFECTS (SUPPLEMENTARY)
+                        RandomEffects Estimation Summary                        
+================================================================================
+Dep. Variable:                ROA_pct   R-squared:                        0.2972
+Estimator:              RandomEffects   R-squared (Between):              0.1853
+No. Observations:                  60   R-squared (Within):               0.3317
+Date:                Sat, Aug 22 2026   R-squared (Overall):              0.2104
+Time:                        16:15:35   Log-likelihood                   -125.47
+Cov. Estimator:                Robust                                           
+                                        F-statistic:                      7.8935
+Entities:                          15   P-value                           0.0002
+Avg Obs:                       4.0000   Distribution:                    F(3,56)
+Min Obs:                       4.0000                                           
+Max Obs:                       4.0000   F-statistic (robust):             12.404
+                                        P-value                           0.0000
+Time periods:                       4   Distribution:                    F(3,56)
+Avg Obs:                       15.000                                           
+Min Obs:                       15.000                                           
+Max Obs:                       15.000                                           
+                                                                                
+                             Parameter Estimates                              
+==============================================================================
+            Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------
+const          13.715     14.268     0.9613     0.3405     -14.866      42.297
+NZTDCI_10      0.1507     0.3049     0.4942     0.6231     -0.4601      0.7614
+Firm_Size      0.4794     1.1136     0.4305     0.6685     -1.7515      2.7102
+Leverage      -26.273     5.8959    -4.4561     0.0000     -38.084     -14.462
+==============================================================================
+
+==========================================================================================
+
+ROE — RANDOM EFFECTS (SUPPLEMENTARY)
+                        RandomEffects Estimation Summary                        
+================================================================================
+Dep. Variable:                ROE_pct   R-squared:                        0.0880
+Estimator:              RandomEffects   R-squared (Between):             -0.3273
+No. Observations:                  60   R-squared (Within):               0.1847
+Date:                Sat, Aug 22 2026   R-squared (Overall):             -0.2261
+Time:                        16:15:35   Log-likelihood                   -177.05
+Cov. Estimator:                Robust                                           
+                                        F-statistic:                      1.8010
+Entities:                          15   P-value                           0.1575
+Avg Obs:                       4.0000   Distribution:                    F(3,56)
+Min Obs:                       4.0000                                           
+Max Obs:                       4.0000   F-statistic (robust):             3.7519
+                                        P-value                           0.0158
+Time periods:                       4   Distribution:                    F(3,56)
+Avg Obs:                       15.000                                           
+Min Obs:                       15.000                                           
+Max Obs:                       15.000                                           
+                                                                                
+                             Parameter Estimates                              
+==============================================================================
+            Parameter  Std. Err.     T-stat    P-value    Lower CI    Upper CI
+------------------------------------------------------------------------------
+const          20.331     29.963     0.6785     0.5002     -39.692      80.353
+NZTDCI_10      0.1825     0.6833     0.2671     0.7904     -1.1863      1.5512
+Firm_Size      0.8738     2.3979     0.3644     0.7169     -3.9298      5.6773
+Leverage      -31.435     13.647    -2.3034     0.0250     -58.772     -4.0966
+==============================================================================
+
+==========================================================================================
+
+ROA — ONE-YEAR LAGGED NZTDCI MODEL
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                ROA_pct   R-squared:                       0.883
+Model:                            OLS   Adj. R-squared:                  0.829
+Method:                 Least Squares   F-statistic:                     84.86
+Date:                Sat, 22 Aug 2026   Prob (F-statistic):           3.51e-20
+Time:                        16:22:21   Log-Likelihood:                -85.302
+No. Observations:                  45   AIC:                             200.6
+Df Residuals:                      30   BIC:                             227.7
+Df Model:                          14                                         
+Covariance Type:                  HC3                                         
+===================================================================================================
+                                      coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+Intercept                          27.1790     21.627      1.257      0.209     -15.210      69.568
+C(Sector)[T.Electronics]            5.2588      7.159      0.735      0.463      -8.773      19.291
+C(Sector)[T.Energy]                -3.6387      3.748     -0.971      0.332     -10.985       3.708
+C(Sector)[T.Financial Services]     0.3362      0.501      0.670      0.503      -0.647       1.319
+C(Sector)[T.Healthcare]            -3.6295      7.385     -0.491      0.623     -18.104      10.845
+C(Sector)[T.Materials]             -7.1131      4.257     -1.671      0.095     -15.456       1.230
+C(Sector)[T.Property]              -1.4583      4.409     -0.331      0.741     -10.100       7.183
+C(Sector)[T.Retail]                -3.1654      2.988     -1.059      0.289      -9.022       2.692
+C(Sector)[T.Telecom]                4.5326      3.207      1.413      0.158      -1.754      10.819
+C(Sector)[T.Transport]             -5.4473      6.748     -0.807      0.420     -18.673       7.778
+C(Year)[T.2024]                    -0.1335      0.721     -0.185      0.853      -1.547       1.280
+C(Year)[T.2025]                     0.4773      0.828      0.576      0.564      -1.146       2.100
+NZTDCI_10_lag1                     -0.2184      0.172     -1.272      0.203      -0.555       0.118
+Firm_Size                          -0.4686      1.065     -0.440      0.660      -2.556       1.619
+Leverage                          -20.6388      7.842     -2.632      0.008     -36.008      -5.270
+==============================================================================
+Omnibus:                       16.248   Durbin-Watson:                   1.577
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               30.334
+Skew:                           0.932   Prob(JB):                     2.59e-07
+Kurtosis:                       6.564   Cond. No.                         946.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+
+==========================================================================================
+
+ROE — ONE-YEAR LAGGED NZTDCI MODEL
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                ROE_pct   R-squared:                       0.824
+Model:                            OLS   Adj. R-squared:                  0.742
+Method:                 Least Squares   F-statistic:                     26.41
+Date:                Sat, 22 Aug 2026   Prob (F-statistic):           4.72e-13
+Time:                        16:22:21   Log-Likelihood:                -126.13
+No. Observations:                  45   AIC:                             282.3
+Df Residuals:                      30   BIC:                             309.4
+Df Model:                          14                                         
+Covariance Type:                  HC3                                         
+===================================================================================================
+                                      coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------
+Intercept                          13.8616     45.797      0.303      0.762     -75.899     103.622
+C(Sector)[T.Electronics]           17.1271     15.951      1.074      0.283     -14.136      48.391
+C(Sector)[T.Energy]                 0.2036      8.992      0.023      0.982     -17.420      17.827
+C(Sector)[T.Financial Services]     1.8428      1.389      1.326      0.185      -0.880       4.566
+C(Sector)[T.Healthcare]             2.3331     16.587      0.141      0.888     -30.176      34.842
+C(Sector)[T.Materials]             -6.9158      9.770     -0.708      0.479     -26.064      12.232
+C(Sector)[T.Property]               7.5524      9.566      0.790      0.430     -11.196      26.301
+C(Sector)[T.Retail]                10.4603      6.739      1.552      0.121      -2.749      23.669
+C(Sector)[T.Telecom]               30.0906      8.207      3.666      0.000      14.005      46.177
+C(Sector)[T.Transport]             -1.7971     14.995     -0.120      0.905     -31.187      27.593
+C(Year)[T.2024]                    -0.4658      1.833     -0.254      0.799      -4.059       3.127
+C(Year)[T.2025]                     1.2111      2.004      0.604      0.546      -2.717       5.139
+NZTDCI_10_lag1                     -0.5700      0.496     -1.148      0.251      -1.543       0.403
+Firm_Size                           0.5240      2.211      0.237      0.813      -3.809       4.857
+Leverage                          -12.2383     20.022     -0.611      0.541     -51.480      27.004
+==============================================================================
+Omnibus:                       12.918   Durbin-Watson:                   1.613
+Prob(Omnibus):                  0.002   Jarque-Bera (JB):               15.156
+Skew:                           0.984   Prob(JB):                     0.000512
+Kurtosis:                       5.053   Cond. No.                         946.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
